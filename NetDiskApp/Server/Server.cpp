@@ -1,4 +1,4 @@
-#include "netdiskapp.h"
+#include "Server.h"
 #include "ui_netdiskapp.h"
 #include <QFile>
 #include <QtDebug>

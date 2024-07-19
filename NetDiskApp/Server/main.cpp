@@ -1,4 +1,4 @@
-#include "netdiskapp.h"
+#include "Server.h"
 
 #include <QApplication>
 

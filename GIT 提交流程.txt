@@ -1,0 +1,9 @@
+git init
+ 
+git add .  
+
+git remote add 自定义仓库名字 对应仓库GIT的URL
+
+ git commit -m ""
+
+git push 自定义远程仓库名  master[分支名]
