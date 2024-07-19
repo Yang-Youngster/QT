@@ -1,8 +1,8 @@
 #ifndef TCPSERVER_H
 #define TCPSERVER_H
 #include <QTcpServer>
-
 #include <QList>
+#include "socketcore.h"
 
 class tcpserver : public QTcpServer
 {

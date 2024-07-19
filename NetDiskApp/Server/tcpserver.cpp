@@ -16,6 +16,11 @@ tcpserver& tcpserver::getInstance()
     static tcpserver tcp;
     return tcp;
 }
+//获取客户端的连接
+void tcpserver::incomingCnnection(qintptr handle)
+{
+
+}
 
 
 
