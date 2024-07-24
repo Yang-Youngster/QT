@@ -26,7 +26,6 @@ void Tcpserver::incomingCnnection(qintptr handle)
     connect(socketcore,SIGNAL(offline(ScoketCore*)),this,SLOT(deleteSocket(ScoketCore*)));
 }
 
-
 void Tcpserver::deleteSocket(SocketCore *socket)
 {
     auto temp=socketList.begin();
@@ -42,7 +41,6 @@ void Tcpserver::deleteSocket(SocketCore *socket)
             socketList.erase(temp);
         }
     }
-
 //    foreach (auto temp, socketList) {
 //        if(temp==socket)
 //        {

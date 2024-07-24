@@ -4,17 +4,21 @@
 #include <QList>
 #include "socketcore.h"
 
-class tcpserver : public QTcpServer
+class Tcpserver : public QTcpServer
 {
     //宏
     Q_OBJECT
 public:
-    tcpserver();
-    static tcpserver& getInstance();
+    Tcpserver();
+    //界面的UI控制对象
+    static Tcpserver& getInstance();
     void incomingCnnection(qintptr handle);
 
-private:
-    QList<socketcore*> socketList;
-};
+public slots:
+    void deleteSocket(SocketCore*);
 
+private:
+    //每个Client的集合
+    QList<SocketCore*> socketList;
+};
 #endif // TCPSERVER_H
