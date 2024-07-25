@@ -251,6 +251,7 @@ Makefile: Server.pro ../../../QT/5.14.2/mingw73_64/mkspecs/win32-g++/qmake.conf 
 		../../../QT/5.14.2/mingw73_64/lib/Qt5Widgets.prl \
 		../../../QT/5.14.2/mingw73_64/lib/Qt5Gui.prl \
 		../../../QT/5.14.2/mingw73_64/lib/Qt5Network.prl \
+		../../../QT/5.14.2/mingw73_64/lib/Qt5Sql.prl \
 		../../../QT/5.14.2/mingw73_64/lib/Qt5Core.prl \
 		../../../QT/5.14.2/mingw73_64/lib/qtmain.prl \
 		../../../QT/5.14.2/mingw73_64/mkspecs/features/build_pass.prf \
@@ -437,6 +438,7 @@ Server.pro:
 ../../../QT/5.14.2/mingw73_64/lib/Qt5Widgets.prl:
 ../../../QT/5.14.2/mingw73_64/lib/Qt5Gui.prl:
 ../../../QT/5.14.2/mingw73_64/lib/Qt5Network.prl:
+../../../QT/5.14.2/mingw73_64/lib/Qt5Sql.prl:
 ../../../QT/5.14.2/mingw73_64/lib/Qt5Core.prl:
 ../../../QT/5.14.2/mingw73_64/lib/qtmain.prl:
 ../../../QT/5.14.2/mingw73_64/mkspecs/features/build_pass.prf:

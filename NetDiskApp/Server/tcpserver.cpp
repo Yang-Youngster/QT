@@ -42,7 +42,6 @@ void Tcpserver::deleteSocket(SocketCore *socket)
             socketList.erase(temp);
         }
     }
-
 //    foreach (auto temp, socketList) {
 //        if(temp==socket)
 //        {
