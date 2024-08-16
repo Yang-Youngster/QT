@@ -1,4 +1,5 @@
 release/main.o
+release/protocol.o
 release/server.o
 release/serverdb.o
 release/socketcore.o

@@ -1,5 +1,5 @@
 #include "tcpserver.h"
-/**
+/***
  *  主要负责 服务端 --> 客户端的连接处理
  *
  *  date: 2024.07.19
@@ -16,6 +16,7 @@ Tcpserver& Tcpserver::getInstance()
     static Tcpserver tcp;
     return tcp;
 }
+
 //获取客户端的连接
 void Tcpserver::incomingCnnection(qintptr handle)
 {

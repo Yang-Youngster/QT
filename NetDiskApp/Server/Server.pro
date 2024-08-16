@@ -17,12 +17,14 @@ DEFINES += QT_DEPRECATED_WARNINGS
 
 SOURCES += \
     main.cpp \
+    protocol.cpp \
     server.cpp \
     serverdb.cpp \
     socketcore.cpp \
     tcpserver.cpp
 
 HEADERS += \
+    protocol.h \
     server.h \
     serverdb.h \
     socketcore.h \

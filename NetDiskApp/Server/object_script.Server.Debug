@@ -1,4 +1,5 @@
 debug/main.o
+debug/protocol.o
 debug/server.o
 debug/serverdb.o
 debug/socketcore.o
