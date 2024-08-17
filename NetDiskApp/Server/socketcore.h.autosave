@@ -30,7 +30,6 @@ public slots:
 
 private:
       QString client_Name;
-      OpenDB::getInstance() DB;
 
 };
 
