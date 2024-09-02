@@ -3,31 +3,28 @@
 
 #include <QMainWindow>
 #include <QTcpSocket>
-#include <serverdb.h>
+#include <QtDebug>
+#include "server.h"
+
 class SocketCore : public QTcpSocket
 {
     Q_OBJECT;
 public:
-//      Ui::NetdiskApp *ui;
+      Ui::server *ui;
       SocketCore();
       QString getClientName();
     //处理客户端传递的信息
-
-
     //信号声明
 signals:
-    //用户下线
+    //用户下线信号用于发送信息
     void offline(SocketCore* socket);
-
 public slots:
        //客户端连接
        void receiveMsg();
        //客户端断开
        void clientoffline();
        //发送文件
-       void sendFileToClient();
-
-
+  //     void sendFileToClient();
 private:
       QString client_Name;
 

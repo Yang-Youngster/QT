@@ -44,22 +44,16 @@ OpenDB::~OpenDB()
 {
     conn.close();
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+//处理下线操作
+bool OpenDB::handleOffline(QString clientName)
+{
+    //更改其中状态
+    QString sql =QString("UPDATE usrInfo set online=0 WHERE name=\'%1\'").arg(clientName);
+    QSqlQuery query;
+    return  query.exec(sql);
+}
 bool OpenDB::isTableExist(QSqlQuery& query, QString tableName) {
-    QString sql = QString("select 1 from sqlite_master where type='table' and name='%1'").arg(tableName);
+    QString sql = QString("select 1 from sqlite_master where type='table' and name=\'%1\'").arg(tableName);
     query.exec(sql);
     return query.next();
 }
@@ -69,14 +63,9 @@ void OpenDB::isFileExist(QString filename)
     if(!file.exists())
     {
         //如果不存在会自动创建
-        qDebug() << "文件不存在，开始创建……" ;
+       qDebug() << "文件不存在，开始创建……" ;
        file.open(QIODevice::ReadWrite);
        file.close();
        qDebug() << "创建完成" ;
     }
 }
-
-
-
-
-

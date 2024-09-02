@@ -17,11 +17,7 @@ public:
     bool isTableExist(QSqlQuery& query, QString tableName);
     void isFileExist(QString filename);
     //账号下线需要进行对数据库的状态进行更改
-    void handleOffline();
-
-
-
-
+    bool handleOffline(QString clientName);
     ~OpenDB();
 private:
     QSqlDatabase conn;

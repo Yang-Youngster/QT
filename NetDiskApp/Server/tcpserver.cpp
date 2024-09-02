@@ -16,7 +16,6 @@ Tcpserver& Tcpserver::getInstance()
     static Tcpserver tcp;
     return tcp;
 }
-
 //获取客户端的连接
 void Tcpserver::incomingCnnection(qintptr handle)
 {
@@ -26,12 +25,9 @@ void Tcpserver::incomingCnnection(qintptr handle)
     socketList.append(socketcore);
     connect(socketcore,SIGNAL(offline(ScoketCore*)),this,SLOT(deleteSocket(ScoketCore*)));
 }
-
-
 void Tcpserver::deleteSocket(SocketCore *socket)
 {
     auto temp=socketList.begin();
-
     for(;temp!=socketList.end();temp++)
     {
         if(socket ==*temp)

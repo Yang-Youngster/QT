@@ -1,5 +1,6 @@
 #include "protocol.h"
 
+//自定义消息段
 PDU *mkPDU(uint uiMsgLen)
 {
     uint uiAllLength=sizeof(PDU)+uiMsgLen;

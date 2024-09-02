@@ -1,24 +1,20 @@
 #include "server.h"
-#include "ui_netdiskapp.h"
-#include <QFile>
-#include <QtDebug>
-#include <QMessageBox>
+#include "ui_server.h"
+#include "socketcore.h"
 
-
-NetdiskApp::NetdiskApp(QWidget *parent): QMainWindow(parent), ui(new Ui::NetdiskApp){
+server::server(QWidget *parent): QWidget(parent), ui(new Ui::server){
     ui->setupUi(this);
     config();   //加载配置文件
-
 }
 //构析函数：用于该类的最后的生命周期，用于回收
-NetdiskApp::~NetdiskApp()
+server::~server()
 {
     delete ui;
 }
 //配置服务端的加载文件
-void NetdiskApp :: config()
+void server :: config()
 {
-    QFile file(":/server.config");
+    QFile file(":/db.config");
     if(file.open(QIODevice::ReadOnly))
     {
         QByteArray localReadAll = file.readAll();
@@ -29,7 +25,8 @@ void NetdiskApp :: config()
         ipAdress =ipList.at(0);
         ipHost=ipList.at(1);
         //组合显示在服务端
-        ui->displayEdit->setText("服务端地址："+ipAdress + "服务器端口: "+ipHost);
+        ui->showInfo->setText("服务端地址："+ipAdress + "服务器端口: "+ipHost);
+
         file.close();
     }
     else
