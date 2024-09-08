@@ -889,6 +889,18 @@ debug/server.o: ../server/server.cpp ../server/server.h \
 		../../../QT/5.14.2/mingw73_64/include/QtWidgets/qdesktopwidget.h \
 		../../../QT/5.14.2/mingw73_64/include/QtGui/qguiapplication.h \
 		../../../QT/5.14.2/mingw73_64/include/QtGui/qinputmethod.h \
+		../../../QT/5.14.2/mingw73_64/include/QtWidgets/QLabel \
+		../../../QT/5.14.2/mingw73_64/include/QtWidgets/qlabel.h \
+		../../../QT/5.14.2/mingw73_64/include/QtWidgets/qframe.h \
+		../../../QT/5.14.2/mingw73_64/include/QtWidgets/QTextBrowser \
+		../../../QT/5.14.2/mingw73_64/include/QtWidgets/qtextbrowser.h \
+		../../../QT/5.14.2/mingw73_64/include/QtWidgets/qtextedit.h \
+		../../../QT/5.14.2/mingw73_64/include/QtWidgets/qabstractscrollarea.h \
+		../../../QT/5.14.2/mingw73_64/include/QtGui/qtextdocument.h \
+		../../../QT/5.14.2/mingw73_64/include/QtGui/qtextoption.h \
+		../../../QT/5.14.2/mingw73_64/include/QtGui/qtextcursor.h \
+		../../../QT/5.14.2/mingw73_64/include/QtGui/qtextformat.h \
+		../../../QT/5.14.2/mingw73_64/include/QtGui/qpen.h \
 		../server/socketcore.h \
 		../../../QT/5.14.2/mingw73_64/include/QtWidgets/QMainWindow \
 		../../../QT/5.14.2/mingw73_64/include/QtWidgets/qmainwindow.h \

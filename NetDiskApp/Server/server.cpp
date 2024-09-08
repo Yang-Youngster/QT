@@ -26,7 +26,6 @@ void server :: config()
         ipHost=ipList.at(1);
         //组合显示在服务端
         ui->showInfo->setText("服务端地址："+ipAdress + "服务器端口: "+ipHost);
-
         file.close();
     }
     else
