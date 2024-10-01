@@ -223,6 +223,7 @@ Makefile: ../client/client.pro ../../../QT/5.14.2/mingw73_64/mkspecs/win32-g++/q
 		../../../QT/5.14.2/mingw73_64/mkspecs/features/qt_config.prf \
 		../../../QT/5.14.2/mingw73_64/mkspecs/win32-g++/qmake.conf \
 		../../../QT/5.14.2/mingw73_64/mkspecs/features/spec_post.prf \
+		.qmake.stash \
 		../../../QT/5.14.2/mingw73_64/mkspecs/features/exclusive_builds.prf \
 		../../../QT/5.14.2/mingw73_64/mkspecs/features/toolchain.prf \
 		../../../QT/5.14.2/mingw73_64/mkspecs/features/default_pre.prf \
@@ -251,8 +252,8 @@ Makefile: ../client/client.pro ../../../QT/5.14.2/mingw73_64/mkspecs/win32-g++/q
 		../../../QT/5.14.2/mingw73_64/lib/Qt5Gui.prl \
 		../../../QT/5.14.2/mingw73_64/lib/Qt5Core.prl \
 		../../../QT/5.14.2/mingw73_64/lib/qtmain.prl \
-		.qmake.stash \
-		../../../QT/5.14.2/mingw73_64/mkspecs/features/build_pass.prf
+		../../../QT/5.14.2/mingw73_64/mkspecs/features/build_pass.prf \
+		../client/config.qrc
 	$(QMAKE) -o Makefile ../client/client.pro -spec win32-g++ CONFIG+=debug CONFIG+=qml_debug
 ../../../QT/5.14.2/mingw73_64/mkspecs/features/spec_pre.prf:
 ../../../QT/5.14.2/mingw73_64/mkspecs/qdevice.pri:
@@ -407,6 +408,7 @@ Makefile: ../client/client.pro ../../../QT/5.14.2/mingw73_64/mkspecs/win32-g++/q
 ../../../QT/5.14.2/mingw73_64/mkspecs/features/qt_config.prf:
 ../../../QT/5.14.2/mingw73_64/mkspecs/win32-g++/qmake.conf:
 ../../../QT/5.14.2/mingw73_64/mkspecs/features/spec_post.prf:
+.qmake.stash:
 ../../../QT/5.14.2/mingw73_64/mkspecs/features/exclusive_builds.prf:
 ../../../QT/5.14.2/mingw73_64/mkspecs/features/toolchain.prf:
 ../../../QT/5.14.2/mingw73_64/mkspecs/features/default_pre.prf:
@@ -435,8 +437,8 @@ Makefile: ../client/client.pro ../../../QT/5.14.2/mingw73_64/mkspecs/win32-g++/q
 ../../../QT/5.14.2/mingw73_64/lib/Qt5Gui.prl:
 ../../../QT/5.14.2/mingw73_64/lib/Qt5Core.prl:
 ../../../QT/5.14.2/mingw73_64/lib/qtmain.prl:
-.qmake.stash:
 ../../../QT/5.14.2/mingw73_64/mkspecs/features/build_pass.prf:
+../client/config.qrc:
 qmake: FORCE
 	@$(QMAKE) -o Makefile ../client/client.pro -spec win32-g++ CONFIG+=debug CONFIG+=qml_debug
 
