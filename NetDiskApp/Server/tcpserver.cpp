@@ -23,6 +23,7 @@ void Tcpserver::incomingCnnection(qintptr handle)
     SocketCore* socketcore=new SocketCore();
     socketcore->setSocketDescriptor(handle);
     socketList.append(socketcore);
+
     connect(socketcore,SIGNAL(offline(ScoketCore*)),this,SLOT(deleteSocket(ScoketCore*)));
 }
 void Tcpserver::deleteSocket(SocketCore *socket)

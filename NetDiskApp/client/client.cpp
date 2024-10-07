@@ -1,5 +1,6 @@
 #include "client.h"
 #include "ui_client.h"
+#include "protocol.h"
 /***
  *  主要负责 客户端 --> 服务端
  *
@@ -12,12 +13,12 @@ client::client(QWidget *parent): QWidget(parent), ui(new Ui::client)
     ui->setupUi(this);
     config();
     //连接服务器
-    connect(&my_tcp_scoket,SIGNAL(connected()),this,SLOT(showConnected()));
+    connect(&tcp_scoket,SIGNAL(connected()),this,SLOT(showConnected()));
     //等待指令处理业务逻辑
-    connect(&my_tcp_scoket,SIGNAL(readyRead()),this,SLOT(handleReceived()));
+    connect(&tcp_scoket,SIGNAL(readyRead()),this,SLOT(handleReceived()));
 
-
-
+    //连接服务器
+    tcp_scoket.connectToHost(QHostAddress(ipadddr),ipHost);
 }
 client::~client()
 {
@@ -34,8 +35,10 @@ void client::config()
        data=data.replace("\r","");
        data=data.replace("\n","-");
        QList<QString> datalist= data.split("-");
-       QString ipadddr=datalist.at(0);
-       QString ipHost=datalist.at(1);
+
+       ipadddr=datalist.at(0);
+
+       ipHost=datalist.at(1).toUShort();
        qDebug() << "IP地址为：" << ipadddr << "端口为：" << ipHost;
        file.close();
     }
@@ -61,6 +64,9 @@ void showConnected()
 void handleReceived()
 {
 
+
+
+
 }
 
 
@@ -68,3 +74,31 @@ void handleReceived()
 
 
 
+//login 信号槽
+void client::on_login_clicked()
+{
+    //获取信息
+    QString username=ui->account->text();
+    QString password=ui->password->text();
+
+    if(!username.isNull()&& !password.isNull())
+    {
+        //更新当前用户名
+        clientName=username;
+        //将信息传送给服务端
+        PDU *pdu=mkPDU(0);
+
+        pdu->uiMsgType=ENUM_MSG_TYPE_LOGIN_REQUEST;
+
+
+
+
+
+
+    }
+
+
+
+
+
+}

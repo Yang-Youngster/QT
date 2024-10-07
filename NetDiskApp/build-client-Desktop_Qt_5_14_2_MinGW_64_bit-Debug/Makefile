@@ -250,6 +250,7 @@ Makefile: ../client/client.pro ../../../QT/5.14.2/mingw73_64/mkspecs/win32-g++/q
 		../client/client.pro \
 		../../../QT/5.14.2/mingw73_64/lib/Qt5Widgets.prl \
 		../../../QT/5.14.2/mingw73_64/lib/Qt5Gui.prl \
+		../../../QT/5.14.2/mingw73_64/lib/Qt5Network.prl \
 		../../../QT/5.14.2/mingw73_64/lib/Qt5Core.prl \
 		../../../QT/5.14.2/mingw73_64/lib/qtmain.prl \
 		../../../QT/5.14.2/mingw73_64/mkspecs/features/build_pass.prf \
@@ -435,6 +436,7 @@ Makefile: ../client/client.pro ../../../QT/5.14.2/mingw73_64/mkspecs/win32-g++/q
 ../client/client.pro:
 ../../../QT/5.14.2/mingw73_64/lib/Qt5Widgets.prl:
 ../../../QT/5.14.2/mingw73_64/lib/Qt5Gui.prl:
+../../../QT/5.14.2/mingw73_64/lib/Qt5Network.prl:
 ../../../QT/5.14.2/mingw73_64/lib/Qt5Core.prl:
 ../../../QT/5.14.2/mingw73_64/lib/qtmain.prl:
 ../../../QT/5.14.2/mingw73_64/mkspecs/features/build_pass.prf:

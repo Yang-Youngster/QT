@@ -91,6 +91,7 @@ struct FileInfo
     int iFileType;          // 文件类型
 };
 
+
 struct PDU
 {
     uint uiPDULen;      // 总的协议数据单元大小
