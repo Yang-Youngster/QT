@@ -69,11 +69,6 @@ void handleReceived()
 
 }
 
-
-
-
-
-
 //login 信号槽
 void client::on_login_clicked()
 {
@@ -87,18 +82,17 @@ void client::on_login_clicked()
         clientName=username;
         //将信息传送给服务端
         PDU *pdu=mkPDU(0);
-
         pdu->uiMsgType=ENUM_MSG_TYPE_LOGIN_REQUEST;
 
-
-
-
-
-
+        //size_t msgLength =std::min(sizeof(PDU)-1,username.length());
+        //可能出现字符串溢出情况
+        strncpy(pdu->caData,username.toStdString().c_str(),32);
+        strncpy(pdu->caData+32,password.toStdString().c_str(),32);
+        //写入函数
+        tcp_scoket.write((char*)pdu,pdu->uiPDULen);
     }
-
-
-
-
-
+    else
+    {
+           QMessageBox::information(nullptr,"Note","输入账号和密码错误！");
+    }
 }

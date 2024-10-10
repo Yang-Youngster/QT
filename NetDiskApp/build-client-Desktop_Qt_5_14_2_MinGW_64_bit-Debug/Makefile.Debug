@@ -530,7 +530,8 @@ debug/client.o: ../client/client.cpp ../client/client.h \
 		../../../QT/5.14.2/mingw73_64/include/QtWidgets/QPushButton \
 		../../../QT/5.14.2/mingw73_64/include/QtWidgets/qpushbutton.h \
 		../../../QT/5.14.2/mingw73_64/include/QtWidgets/qabstractbutton.h \
-		../../../QT/5.14.2/mingw73_64/include/QtGui/qicon.h
+		../../../QT/5.14.2/mingw73_64/include/QtGui/qicon.h \
+		../client/protocol.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o debug/client.o ../client/client.cpp
 
 debug/protocol.o: ../client/protocol.cpp ../client/protocol.h

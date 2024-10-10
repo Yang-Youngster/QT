@@ -7,6 +7,10 @@
 #include <QMessageBox>
 #include <QDebug>
 #include <QHostAddress>
+#include <iostream>
+#include <algorithm>
+#include <string>
+#include <QByteArray>
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class client; }
