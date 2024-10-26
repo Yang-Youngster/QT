@@ -1,10 +1,16 @@
 #include "server.h"
 #include "ui_server.h"
 #include "socketcore.h"
+#include "tcpserver.h"
+#include "serverdb.h"
 
 server::server(QWidget *parent): QWidget(parent), ui(new Ui::server){
     ui->setupUi(this);
     config();   //加载配置文件
+    //启动服务器进行监听
+    //监听连接
+    Tcpserver::getInstance().listen(QHostAddress(ipAdress),ipHost);
+    OpenDB::getInstance().init();
 }
 //构析函数：用于该类的最后的生命周期，用于回收
 server::~server()
@@ -21,11 +27,12 @@ void server :: config()
         QString buffer =localReadAll.toStdString().c_str();
         buffer.replace("\r\n","-");
         QStringList ipList=buffer.split("-");
-//      qDebug() << "显示数据" <<ipList;
+        qDebug() << "显示数据" <<ipList;
         ipAdress =ipList.at(0);
-        ipHost=ipList.at(1);
+        ipHost=ipList.at(1).toUShort();
+         qDebug() << "IP地址：" <<ipAdress << "端口："<<ipHost;
         //组合显示在服务端
-        ui->showInfo->setText("服务端地址："+ipAdress + "服务器端口: "+ipHost);
+        ui->showInfo->setText("服务端地址："+ipAdress + "服务器端口: "+(QString)ipHost);
         file.close();
     }
     else

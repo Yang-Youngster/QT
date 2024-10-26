@@ -237,6 +237,7 @@ release/moc_client.cpp: ../client/client.h \
 		../../../QT/5.14.2/mingw73_64/include/QtCore/QDebug \
 		../../../QT/5.14.2/mingw73_64/include/QtNetwork/QHostAddress \
 		../../../QT/5.14.2/mingw73_64/include/QtNetwork/qhostaddress.h \
+		../../../QT/5.14.2/mingw73_64/include/QtCore/QByteArray \
 		release/moc_predefs.h \
 		../../../QT/5.14.2/mingw73_64/bin/moc.exe
 	'D:\QT\5.14.2\mingw73_64\bin\moc.exe' $(DEFINES) --include D:/QT_Code/NetDiskApp/build-client-Desktop_Qt_5_14_2_MinGW_64_bit-Debug/release/moc_predefs.h -ID:/QT/5.14.2/mingw73_64/mkspecs/win32-g++ -ID:/QT_Code/NetDiskApp/client -ID:/QT/5.14.2/mingw73_64/include -ID:/QT/5.14.2/mingw73_64/include/QtWidgets -ID:/QT/5.14.2/mingw73_64/include/QtGui -ID:/QT/5.14.2/mingw73_64/include/QtANGLE -ID:/QT/5.14.2/mingw73_64/include/QtNetwork -ID:/QT/5.14.2/mingw73_64/include/QtCore -I. -ID:/QT/Tools/mingw730_64/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++ -ID:/QT/Tools/mingw730_64/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/x86_64-w64-mingw32 -ID:/QT/Tools/mingw730_64/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/backward -ID:/QT/Tools/mingw730_64/lib/gcc/x86_64-w64-mingw32/7.3.0/include -ID:/QT/Tools/mingw730_64/lib/gcc/x86_64-w64-mingw32/7.3.0/include-fixed -ID:/QT/Tools/mingw730_64/x86_64-w64-mingw32/include ../client/client.h -o release/moc_client.cpp
@@ -381,6 +382,7 @@ release/main.o: ../client/main.cpp ../client/client.h \
 		../../../QT/5.14.2/mingw73_64/include/QtCore/QDebug \
 		../../../QT/5.14.2/mingw73_64/include/QtNetwork/QHostAddress \
 		../../../QT/5.14.2/mingw73_64/include/QtNetwork/qhostaddress.h \
+		../../../QT/5.14.2/mingw73_64/include/QtCore/QByteArray \
 		../../../QT/5.14.2/mingw73_64/include/QtWidgets/QApplication \
 		../../../QT/5.14.2/mingw73_64/include/QtWidgets/qapplication.h \
 		../../../QT/5.14.2/mingw73_64/include/QtCore/qcoreapplication.h \
@@ -509,6 +511,7 @@ release/client.o: ../client/client.cpp ../client/client.h \
 		../../../QT/5.14.2/mingw73_64/include/QtCore/QDebug \
 		../../../QT/5.14.2/mingw73_64/include/QtNetwork/QHostAddress \
 		../../../QT/5.14.2/mingw73_64/include/QtNetwork/qhostaddress.h \
+		../../../QT/5.14.2/mingw73_64/include/QtCore/QByteArray \
 		ui_client.h \
 		../../../QT/5.14.2/mingw73_64/include/QtCore/QVariant \
 		../../../QT/5.14.2/mingw73_64/include/QtWidgets/QApplication \

@@ -34,7 +34,6 @@ public slots:
 private slots:
 
    void handleReceived();
-
    void on_login_clicked();
 
 private:

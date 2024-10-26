@@ -12,7 +12,7 @@ public:
     Tcpserver();
     //界面的UI控制对象
     static Tcpserver& getInstance();
-    void incomingCnnection(qintptr handle);
+    void incomingConnection(qintptr handle);
 
 public slots:
     void deleteSocket(SocketCore*);

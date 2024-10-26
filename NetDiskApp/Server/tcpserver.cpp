@@ -1,4 +1,6 @@
 #include "tcpserver.h"
+
+
 /***
  *  主要负责 服务端 --> 客户端的连接处理
  *
@@ -17,13 +19,15 @@ Tcpserver& Tcpserver::getInstance()
     return tcp;
 }
 //获取客户端的连接
-void Tcpserver::incomingCnnection(qintptr handle)
+void Tcpserver::incomingConnection(qintptr handle)
 {
     qDebug() << "new client connected ! ";
     SocketCore* socketcore=new SocketCore();
     socketcore->setSocketDescriptor(handle);
     socketList.append(socketcore);
+    //新建立的连接添加到窗口中
 
+    //何时触发
     connect(socketcore,SIGNAL(offline(ScoketCore*)),this,SLOT(deleteSocket(ScoketCore*)));
 }
 void Tcpserver::deleteSocket(SocketCore *socket)

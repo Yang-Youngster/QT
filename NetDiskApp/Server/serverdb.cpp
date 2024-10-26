@@ -69,3 +69,10 @@ void OpenDB::isFileExist(QString filename)
        qDebug() << "创建完成" ;
     }
 }
+
+bool OpenDB::login(QString username, QString password)
+{
+    QString sql="select count(*) from UserInfo u where u.username==username and u.password==password";
+    QSqlQuery query;
+    return  query.exec(sql);
+}

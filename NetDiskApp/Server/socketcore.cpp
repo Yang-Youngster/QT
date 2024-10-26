@@ -28,6 +28,15 @@ void SocketCore::receiveMsg()
     //读取缓冲区数据，从第5个字节起
     this->read((char*)&tempdu+sizeof(uint),uiAllLength-sizeof(uint));
     //获取对象之后的处理方式
+    qDebug()<< tempdu->caMsg;
+
+
+
+
+
+
+
+
 
 }
 //处理下线消息

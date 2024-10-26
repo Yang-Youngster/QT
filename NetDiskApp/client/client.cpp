@@ -1,6 +1,7 @@
 #include "client.h"
 #include "ui_client.h"
 #include "protocol.h"
+#include <QDir>
 /***
  *  主要负责 客户端 --> 服务端
  *
@@ -40,6 +41,9 @@ void client::config()
 
        ipHost=datalist.at(1).toUShort();
        qDebug() << "IP地址为：" << ipadddr << "端口为：" << ipHost;
+       qDebug() << QCoreApplication::applicationDirPath ();
+       qDebug() <<QDir::currentPath();
+
        file.close();
     }
     else
@@ -52,16 +56,17 @@ void client::config()
  * 功能描述：连接提示
  * 函数参数：void
  */
-void showConnected()
+void client::showConnected()
 {
-     QMessageBox::information(nullptr, "温馨提示", "<html><body style='font-size:16px;color:blue;'><p>这是一个重要的信息提示。</p><p>请仔细阅读并根据提示操作。</p></body></html>");
+       QMessageBox::information(this,"连接服务器","连接服务器成功");
+    // QMessageBox::information(nullptr, "温馨提示", "<html><body style='font-size:16px;color:blue;'><p>这是一个重要的信息提示。</p><p>请仔细阅读并根据提示操作。</p></body></html>");
 }
 /***
  *
  * 功能描述：处理传输的指令
  * 函数参数：void
  */
-void handleReceived()
+void client::handleReceived()
 {
 
 
@@ -90,6 +95,8 @@ void client::on_login_clicked()
         strncpy(pdu->caData+32,password.toStdString().c_str(),32);
         //写入函数
         tcp_scoket.write((char*)pdu,pdu->uiPDULen);
+        qDebug() << "登录用户名：" << username << "密码：" << password;
+
     }
     else
     {

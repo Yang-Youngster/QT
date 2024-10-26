@@ -910,7 +910,12 @@ release/server.o: ../server/server.cpp ../server/server.h \
 		../../../QT/5.14.2/mingw73_64/include/QtNetwork/qtcpsocket.h \
 		../../../QT/5.14.2/mingw73_64/include/QtNetwork/qtnetworkglobal.h \
 		../../../QT/5.14.2/mingw73_64/include/QtNetwork/qtnetwork-config.h \
-		../../../QT/5.14.2/mingw73_64/include/QtNetwork/qabstractsocket.h
+		../../../QT/5.14.2/mingw73_64/include/QtNetwork/qabstractsocket.h \
+		../server/tcpserver.h \
+		../../../QT/5.14.2/mingw73_64/include/QtNetwork/QTcpServer \
+		../../../QT/5.14.2/mingw73_64/include/QtNetwork/qtcpserver.h \
+		../../../QT/5.14.2/mingw73_64/include/QtNetwork/qhostaddress.h \
+		../../../QT/5.14.2/mingw73_64/include/QtCore/QList
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o release/server.o ../server/server.cpp
 
 release/serverdb.o: ../server/serverdb.cpp ../server/serverdb.h \

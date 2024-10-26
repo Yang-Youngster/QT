@@ -14,9 +14,10 @@ public:
       SocketCore();
       QString getClientName();
     //处理客户端传递的信息
+
     //信号声明
 signals:
-    //用户下线信号用于发送信息
+    //用户下线信号用于发送信息-
     void offline(SocketCore* socket);
 public slots:
        //客户端连接

@@ -13,11 +13,19 @@ class OpenDB : public QObject
 public:
     explicit OpenDB(QObject *parent=nullptr);
     static OpenDB &getInstance();
+
     void init();
     bool isTableExist(QSqlQuery& query, QString tableName);
     void isFileExist(QString filename);
     //账号下线需要进行对数据库的状态进行更改
     bool handleOffline(QString clientName);
+
+    //业务类
+    bool login(QString username ,QString password);
+
+
+
+
     ~OpenDB();
 private:
     QSqlDatabase conn;
